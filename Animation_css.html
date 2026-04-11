@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation</title>
+
+    <style>
+
+       * {box-sizing: border-box;}
+
+       .wrapper {
+           display: flex;
+           border: black solid 5px;
+           width: 400px;
+           height: 400px;
+           margin: 0 auto;
+           position: relative;
+       }
+
+
+       .square_first {
+
+           position: absolute;
+           align-self: flex-start;
+           background-color: mediumvioletred;
+           width: 50px;
+           height: 50px;
+           z-index: 2;
+           animation: first_ani 5s linear 1s infinite;
+
+         }
+
+         .square_second {
+
+             position: absolute;
+             align-self: flex-start;
+             background-color: #006fff;
+             width: 50px;
+             height: 50px;
+             z-index: 1;
+             animation: second_ani 5s linear 1s infinite;
+           }
+
+       @keyframes first_ani {
+
+           0%   {background-color:blueviolet; left:10px; top:0px;}
+           25%  {background-color:darkviolet; left:150px; top:50px;}
+           50%  {background-color:violet; left:300px; top:200px;}
+           75%  {background-color: #d337d0; left:325px; top:250px;}
+           100% {background-color: #ab1ed3; left:0px; top:0px;}
+
+
+       }
+
+
+     @keyframes second_ani {
+
+           0%   {background-color: #09f4ce; left:0px; top:0px;}
+           25%  {background-color: #0074a8; left:100px; top:150px;}
+           50%  {background-color: #2323d6; left:200px; top:200px;}
+           75%  {background-color: #446aca; left:150px; top:300px;}
+           100% {background-color: #0b247a; left:0px; top:0px;}
+       }
+
+
+    </style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+
+<div class="square_first"></div>
+    <div class="square_second"></div>
+</div>
+
+</body>
+</html>
